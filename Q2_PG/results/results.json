@@ -1,0 +1,225 @@
+{
+ "threshold_H": 900.0,
+ "final_eval_definition": "mean of the final 20 evaluation episodes",
+ "methods": {
+  "M1": {
+   "desc": "Discretized policy + full-return REINFORCE",
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "final_eval_per_seed": {
+    "0": 169.4,
+    "1": 176.35,
+    "2": 88.9,
+    "3": 113.05,
+    "4": 191.4
+   },
+   "final_eval_mean": 147.82,
+   "final_eval_std": 44.32660882585087,
+   "threshold_episode_per_seed": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null
+   },
+   "n_reached": 0,
+   "n_not_reached": 5,
+   "threshold_episode_mean": null,
+   "threshold_episode_std": null
+  },
+  "M2": {
+   "desc": "Neural policy + full-return REINFORCE",
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "final_eval_per_seed": {
+    "0": 155.2,
+    "1": 156.85,
+    "2": 41.8,
+    "3": 258.8,
+    "4": 141.0
+   },
+   "final_eval_mean": 150.73,
+   "final_eval_std": 76.9691139353962,
+   "threshold_episode_per_seed": {
+    "0": null,
+    "1": null,
+    "2": null,
+    "3": null,
+    "4": null
+   },
+   "n_reached": 0,
+   "n_not_reached": 5,
+   "threshold_episode_mean": null,
+   "threshold_episode_std": null
+  },
+  "M3": {
+   "desc": "Neural policy + leave-one-out batch baseline",
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "final_eval_per_seed": {
+    "0": 1000.0,
+    "1": 1000.0,
+    "2": 1000.0,
+    "3": 1000.0,
+    "4": 1000.0
+   },
+   "final_eval_mean": 1000.0,
+   "final_eval_std": 0.0,
+   "threshold_episode_per_seed": {
+    "0": 3520,
+    "1": 2720,
+    "2": 3200,
+    "3": 2720,
+    "4": 3680
+   },
+   "n_reached": 5,
+   "n_not_reached": 0,
+   "threshold_episode_mean": 3168.0,
+   "threshold_episode_std": 443.98198161637146
+  },
+  "M4": {
+   "desc": "Neural policy + moving-average baseline, beta=0.01",
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "final_eval_per_seed": {
+    "0": 98.45,
+    "1": 56.9,
+    "2": 75.9,
+    "3": 873.2,
+    "4": 85.4
+   },
+   "final_eval_mean": 237.97000000000003,
+   "final_eval_std": 355.427073391997,
+   "threshold_episode_per_seed": {
+    "0": null,
+    "1": 4320,
+    "2": null,
+    "3": 4800,
+    "4": null
+   },
+   "n_reached": 2,
+   "n_not_reached": 3,
+   "threshold_episode_mean": 4560.0,
+   "threshold_episode_std": 339.4112549695428
+  },
+  "M5": {
+   "desc": "Neural policy + moving-average baseline, beta=0.1",
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "final_eval_per_seed": {
+    "0": 888.8,
+    "1": 1000.0,
+    "2": 1000.0,
+    "3": 1000.0,
+    "4": 189.75
+   },
+   "final_eval_mean": 815.71,
+   "final_eval_std": 353.21964908538143,
+   "threshold_episode_per_seed": {
+    "0": null,
+    "1": 3360,
+    "2": 4000,
+    "3": 3520,
+    "4": null
+   },
+   "n_reached": 3,
+   "n_not_reached": 2,
+   "threshold_episode_mean": 3626.6666666666665,
+   "threshold_episode_std": 333.06655991458126
+  },
+  "M6": {
+   "desc": "Neural policy + return-to-go",
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "final_eval_per_seed": {
+    "0": 1000.0,
+    "1": 76.9,
+    "2": 957.5,
+    "3": 1000.0,
+    "4": 42.35
+   },
+   "final_eval_mean": 615.35,
+   "final_eval_std": 507.74877400147403,
+   "threshold_episode_per_seed": {
+    "0": 4320,
+    "1": 6240,
+    "2": 3680,
+    "3": 2240,
+    "4": 4960
+   },
+   "n_reached": 5,
+   "n_not_reached": 0,
+   "threshold_episode_mean": 4288.0,
+   "threshold_episode_std": 1485.5032817197005
+  }
+ },
+ "env_info": {
+  "env_id": "InvertedPendulum-v5",
+  "obs_dim": 4,
+  "act_dim": 1,
+  "action_low": [
+   -3.0
+  ],
+  "action_high": [
+   3.0
+  ],
+  "max_episode_steps": 1000,
+  "gamma": 1.0,
+  "sigma": 0.3
+ },
+ "loo_gradient_check": {
+  "n": 16,
+  "returns": [
+   7.0,
+   7.0,
+   11.0,
+   6.0,
+   6.0,
+   5.0,
+   7.0,
+   9.0,
+   5.0,
+   10.0,
+   5.0,
+   10.0,
+   9.0,
+   6.0,
+   7.0,
+   16.0
+  ],
+  "max_abs_grad_diff": 0.0,
+  "max_abs_grad": 21.728256225585938,
+  "relative_diff": 0.0,
+  "allclose": true
+ }
+}

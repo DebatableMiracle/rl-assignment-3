@@ -1,0 +1,8 @@
+# Tested with Python 3.12.3  (pip install -r installations.txt)
+numpy==2.4.4
+torch==2.14.1
+gymnasium[mujoco]==1.4.0
+mujoco==3.16.0
+matplotlib==3.10.8
+imageio==2.37.3
+imageio-ffmpeg
